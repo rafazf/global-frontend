@@ -1,0 +1,22 @@
+<div class="h-14 w-5/6 m-auto flex items-center justify-between">
+    <div class="font-bold text-teal-800">
+        <h1 class="hidden sm:block">GLOBAL TECNOLOGIAS ACADEMY</h1>
+        <h1 class="block sm:hidden text-2xl">G.T.A</h1>
+    </div>
+    <div class="flex gap-2">
+        <button routerLink="/empleados" class="p-2 rounded-lg border-b shadow-sm hover:bg-teal-600 hover:text-white transition-all"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{exact:true}"
+        #rla="routerLinkActive"
+        [ngClass]="{'bg-teal-600 text-white':rla.isActive}"
+        >Consultas</button>
+        
+        <button routerLink="/empleados/registro" class="p-2 rounded-lg shadow-sm border-b hover:bg-teal-600 hover:text-white transition-all" 
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        #rlb="routerLinkActive"
+        [ngClass]="{'bg-teal-600 text-white':rlb.isActive}"
+        >Registro</button>
+        
+    </div>
+</div>

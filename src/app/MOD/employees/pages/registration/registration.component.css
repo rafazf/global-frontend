@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+input, select{
+  border-radius: .3rem;
+  padding: .2rem;
+  background-color: white;
+  font-size: 15px;
+}
+.campo-invalido {
+  border-color: red; /* Cambia el color del borde a rojo */
+}
