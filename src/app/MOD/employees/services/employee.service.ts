@@ -3,8 +3,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { IEmployeeResponse, IEmployeeReq,IEmployeeRes } from '../interfaces/employee';
 import { environment } from '../../../../environments/environment';
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 @Injectable({
   providedIn: 'root'
