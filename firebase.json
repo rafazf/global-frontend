@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/frontend-gta",
+    "public": "dist/frontend-gta/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
