@@ -46,24 +46,8 @@ export class RegistrationComponent {
     //Verificamos que el fomulario sea valido antes de enviar los datos
     if (this.employeeForm.valid) {
       // Enviar el formulario al servidor para crear el empleado
-      this.employeeService.registerEmployee(this.employeeForm.value as IEmployeeReq).subscribe((d)=>{this.showsuccess(d.message)})
+      this.employeeService.registerEmployee(this.employeeForm.value as IEmployeeReq).subscribe((d)=>{this.showsuccess(d.message);this.employeeForm.reset()})
     }
-  }
-
-  // Métodos de validación personalizados
-  validarPrimerApellido(control:any) {
-    const value = control.value;
-    return this.validacionService.validarPrimerApellido(value) ? null : { invalidPrimerApellido: true };
-  }
-
-  validarSegundoApellido(control:any) {
-    const value = control.value;
-    return this.validacionService.validarSegundoApellido(value) ? null : { invalidSegundoApellido: true };
-  }
-
-  validarPrimerNombre(control:any) {
-    const value = control.value;
-    return this.validacionService.validarPrimerNombre(value) ? null : { invalidPrimerNombre: true };
   }
   //Mensaje de éxito
   showsuccess(msg:string) {

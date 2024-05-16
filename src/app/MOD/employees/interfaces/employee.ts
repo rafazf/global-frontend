@@ -17,7 +17,7 @@ export interface IEmployeeReq {
   area: string;
   estado: string;
 }
-/**Interface de todos los datos del empleado */
+/**Interface para almacenar todos los datos del empleado */
 export interface IEmployeeResponse {
   id_empleado: number;
   primer_apellido: string;
